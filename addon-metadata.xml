@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+    <meta>
+        <file-type type="string">FlightGear add-on metadata</file-type>
+        <format-version type="int">1</format-version>
+    </meta>
+
+    <addon>
+        <identifier type="string">com.slawekmikula.flightgear.LittleNavMap</identifier>
+        <name type="string">LittleNavMap</name>
+        <version type="string">0.0.1</version>
+
+        <authors>
+            <author>
+                <name type="string">slawekmikula from the FlightGear forum</name>
+                <email type="string"></email>
+                <url type="string"></url>
+            </author>
+        </authors>
+
+        <short-description type="string">
+            LittleNavMap addon
+        </short-description>
+
+        <long-description type="string">
+            This add-on feeds the data to the LittleNavMap application
+        </long-description>
+
+        <license>
+            <designation type="string">
+                GNU GPL version 2 or later
+            </designation>
+
+            <file type="string">
+                LICENSE
+            </file>
+
+            <url type="string">
+                https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+            </url>
+        </license>
+
+        <min-FG-version type="string">2019.2.0</min-FG-version>
+        <max-FG-version type="string">none</max-FG-version>
+
+        <urls>
+            <home-page type="string">
+                https://forum.flightgear.org/viewtopic.php>
+            </home-page>
+
+            <download type="string">
+                https://github.com/slawekmikula/fg-addon-littlenavmap/download
+            </download>
+
+            <support type="string">
+                http://wiki.flightgear.org/addon-littlenavmap
+            </support>
+
+            <code-repository type="string">
+                https://github.com/slawekmikula/fg-addon-littlenavmap
+            </code-repository>
+        </urls>
+
+        <tags>
+            <tag type="string">littlenavmap</tag>
+            <tag type="string">protocol</tag>
+        </tags>
+    </addon>
+</PropertyList>

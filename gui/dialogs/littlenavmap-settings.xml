@@ -38,55 +38,31 @@
 
 	<hrule/>
 
-	<checkbox>
-		<halign>left</halign>
-		<label>Enable LinuxTrack</label>
-		<property>/sim/linuxtrack/enabled</property>
-		<live>true</live>
-		<binding>
-			<command>dialog-apply</command>
-		</binding>
-	</checkbox>
+    <input>
+        <name>udp-host</name>
+        <label>UDP host:</label>
+        <halign>right</halign>
+        <pref-width>200</pref-width>
+        <height>25</height>
+        <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/addon-devel/udp-host</property>
+        <binding>
+            <command>dialog-apply</command>
+            <object-name>udp-host</object-name>
+        </binding>
+    </input>
 
-	<checkbox>
-		<halign>left</halign>
-		<label>Track ALL</label>
-		<property>/sim/linuxtrack/track-all</property>
-		<live>true</live>
-		<binding>
-			<command>dialog-apply</command>
-		</binding>
-	</checkbox>
-
-	<checkbox>
-		<halign>left</halign>
-		<label>Track X Axis</label>
-		<property>/sim/linuxtrack/track-x</property>
-		<live>true</live>
-		<binding>
-			<command>dialog-apply</command>
-		</binding>
-	</checkbox>
-
-	<checkbox>
-		<halign>left</halign>
-		<label>Track Y Axis</label>
-		<property>/sim/linuxtrack/track-y</property>
-		<live>true</live>
-		<binding>
-			<command>dialog-apply</command>
-		</binding>
-	</checkbox>
-
-	<checkbox>
-		<halign>left</halign>
-		<label>Track Z Axis</label>
-		<property>/sim/linuxtrack/track-z</property>
-		<live>true</live>
-		<binding>
-			<command>dialog-apply</command>
-		</binding>
-	</checkbox>
+    <input>
+        <name>udp-port</name>
+        <label>UDP port:</label>
+        <halign>right</halign>
+        <pref-width>200</pref-width>
+        <height>25</height>
+        <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/addon-devel/udp-port</property>
+        <binding>
+            <command>dialog-apply</command>
+            <object-name>udp-port</object-name>
+        </binding>
+    </input>
 
 	<hrule/>
 

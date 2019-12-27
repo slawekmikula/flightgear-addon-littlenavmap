@@ -1,94 +1,112 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-	<name>littlenavmap-settings</name>
-	<layout>vbox</layout>
-	<width>330</width>
-	<group>
-		<layout>hbox</layout>
+    <name>littlenavmap-settings</name>
+    <layout>vbox</layout>
+    <width>330</width>
+    <group>
+        <layout>hbox</layout>
 
-		<button>
-			<legend> </legend>
-			<pref-width>16</pref-width>
-			<pref-height>16</pref-height>
-			<binding>
-				<command>dialog-close</command>
-			</binding>
-		</button>
+        <button>
+            <legend> </legend>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
 
-		<empty><stretch>1</stretch></empty>
+        <empty>
+            <stretch>1</stretch>
+        </empty>
 
-		<text>
-			<label>LittleNavMap options</label>
-		</text>
+        <text>
+            <label>LittleNavMap options</label>
+        </text>
 
-		<empty><stretch>1</stretch></empty>
+        <empty>
+            <stretch>1</stretch>
+        </empty>
 
-		<button>
-			<legend> </legend>
-			<key>Esc</key>
-			<pref-width>16</pref-width>
-			<pref-height>16</pref-height>
-			<binding>
-				<command>dialog-close</command>
-			</binding>
-		</button>
+        <button>
+            <legend> </legend>
+            <key>Esc</key>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
 
-	</group>
+    </group>
 
-	<hrule/>
+    <hrule/>
 
-    <input>
-        <name>udp-host</name>
-        <label>UDP host:</label>
-        <halign>right</halign>
-        <pref-width>200</pref-width>
-        <height>25</height>
-        <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/addon-devel/udp-host</property>
-        <binding>
-            <command>dialog-apply</command>
-            <object-name>udp-host</object-name>
-        </binding>
-    </input>
+    <group>
+        <layout>hbox</layout>
 
-    <input>
-        <name>udp-port</name>
-        <label>UDP port:</label>
-        <halign>right</halign>
-        <pref-width>200</pref-width>
-        <height>25</height>
-        <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/addon-devel/udp-port</property>
-        <binding>
-            <command>dialog-apply</command>
-            <object-name>udp-port</object-name>
-        </binding>
-    </input>
+        <text>
+            <label>UDP host:</label>
+        </text>
 
-	<hrule/>
+        <input>
+            <name>udp-host</name>
+            <height>25</height>
+            <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/addon-devel/udp-host</property>
+            <binding>
+                <command>dialog-apply</command>
+                <object-name>udp-host</object-name>
+            </binding>
+        </input>
+    </group>
 
-	<group>
-		<layout>hbox</layout>
-		<empty><stretch>1</stretch></empty>
-		<button>
-			<legend>Save</legend>
-			<pref-width>90</pref-width>
-			<pref-height>30</pref-height>
-			<binding>
-				<command>dialog-close</command>
-			</binding>
-			<binding>
-				<command>dialog-apply</command>
-			</binding>
-		</button>
+    <group>
+        <layout>hbox</layout>
 
-		<button>
-			<legend>Close</legend>
-			<pref-width>90</pref-width>
-			<pref-height>30</pref-height>
-			<binding>
-				<command>dialog-close</command>
-			</binding>
-		</button>
-		<empty><stretch>1</stretch></empty>
-	</group>
+        <text>
+            <label>UDP port:</label>
+        </text>
+
+        <input>
+            <name>udp-port</name>
+            <height>25</height>
+            <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/addon-devel/udp-port</property>
+            <binding>
+                <command>dialog-apply</command>
+                <object-name>udp-port</object-name>
+            </binding>
+        </input>
+    </group>
+    
+    <hrule/>
+
+    <group>
+        <layout>hbox</layout>
+        <empty>
+            <stretch>1</stretch>
+        </empty>
+        <button>
+            <legend>Save</legend>
+            <pref-width>90</pref-width>
+            <pref-height>30</pref-height>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </button>
+
+        <button>
+            <legend>Close</legend>
+            <pref-width>90</pref-width>
+            <pref-height>30</pref-height>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+        <empty>
+            <stretch>1</stretch>
+        </empty>
+    </group>
 </PropertyList>

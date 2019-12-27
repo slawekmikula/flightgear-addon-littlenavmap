@@ -11,6 +11,18 @@ var main = func( addon ) {
     var my_root_path = getprop("/addons/by-id/" ~ my_addon_id ~ "/path");
     var my_settings_root_path = "/addons/by-id/" ~ my_addon_id ~ "/addon-devel/";
 
+    # persistent settings
+    var udpHostNode = props.globals.getNode(my_settings_root_path ~ "/udp-host", 1);
+    udpHostNode.setAttribute("userarchive", "y");
+    if (udpHostNode.getValue() == nil) {
+      udpHostNode.setValue("localhost");
+    }    
+    var udpPortNode = props.globals.getNode(my_settings_root_path ~ "/udp-port", 1);
+    udpPortNode.setAttribute("userarchive", "y");
+    if (udpPortNode.getValue() == nil) {
+      udpPortNode.setValue("7755");
+    }
+
     var initProtocol = func() {
       var refresh = "1"; # refresh rate
       var udphost = getprop(my_settings_root_path ~ "udp-host") or "localhost";

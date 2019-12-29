@@ -37,7 +37,7 @@ var main = func( addon ) {
       );
     };
 
-    var init = setlistener("/sim/signals/fdm-initialized", func() {
+    var init = _setlistener("/sim/signals/fdm-initialized", func() {
         removelistener(init); # only call once
         print("fdm-initialized");
         initProtocol();
@@ -49,7 +49,7 @@ var main = func( addon ) {
         initProtocol();
     });
 
-    var exit = setlistener("/sim/signals/exit", func() {
+    var exit = _setlistener("/sim/signals/exit", func() {
       removelistener(exit); # only call once
       print("exit");
       fgcommand("remove-io-channel",

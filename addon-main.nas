@@ -6,9 +6,7 @@
 
 var main = func( addon ) {
     var root = addon.basePath;
-    var my_addon_id  = "com.slawekmikula.flightgear.LittleNavMap";
-    var my_version   = getprop("/addons/by-id/" ~ my_addon_id ~ "/version");
-    var my_root_path = getprop("/addons/by-id/" ~ my_addon_id ~ "/path");
+    var my_addon_id  = addon.id;
     var my_settings_root_path = "/addons/by-id/" ~ my_addon_id ~ "/addon-devel/";
 
     # persistent settings
@@ -27,7 +25,7 @@ var main = func( addon ) {
       var refresh = "1"; # refresh rate
       var udphost = getprop(my_settings_root_path ~ "udp-host") or "localhost";
       var udpport = getprop(my_settings_root_path ~ "udp-port") or "7755";
-      var protocolstring = "generic,socket,out," ~ refresh ~ "," ~ udphost ~ "," ~ udpport ~ ",udp,[addon=" ~ my_addon_id ~ "]/Protocol/littlenavmap";
+      var protocolstring = "generic,socket,out," ~ refresh ~ "," ~ udphost ~ "," ~ udpport ~ ",udp,littlenavmap";
 
       fgcommand("add-io-channel",
         props.Node.new({

@@ -114,7 +114,12 @@
                 <type>string</type>
                 <node>/sim/aircraft</node>
             </chunk>
-            <!--airplaneReg = ""-->
+            <chunk>
+                <name>airplaneReg = ""</name>
+                <format>%s</format>
+                <type>string</type>
+                <node>/sim/user/callsign</node>
+            </chunk>
             <!--airplaneAirline = ""-->
             <!--airplaneFlightnumber = ""-->
             <!--fromIdent = ""-->

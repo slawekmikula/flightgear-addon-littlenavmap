@@ -14,61 +14,42 @@
         <authors>
             <author>
                 <name type="string">slawekmikula from the FlightGear forum</name>
-                <email type="string"></email>
+                <email type="string">slawek.mikula@gmail.com</email>
                 <url type="string"></url>
             </author>
         </authors>
 
-        <short-description type="string">
-            LittleNavMap addon
-        </short-description>
+        <maintainers>
+            <maintainer>
+                <name type="string">slawekmikula from the FlightGear forum</name>
+                <email type="string">slawek.mikula@gmail.com</email>
+                <url type="string"></url>
+            </maintainer>
+        </maintainers>
 
-        <long-description type="string">
-            This add-on feeds the data to the LittleNavMap application
-        </long-description>
+        <short-description type="string">LittleNavMap addon</short-description>
+        <long-description type="string">This add-on feeds the data to the LittleNavMap application</long-description>
 
         <localized>
             <pl>
-                <short-description type="string">
-                    Rozszerzenie LittleNavMap
-                </short-description>
-
-                <long-description type="string">
-                    To rozszerzenie dostarcza dane do aplikacji LittleNavMap
-                </long-description>
-
+                <short-description type="string">Rozszerzenie LittleNavMap</short-description>
+                <long-description type="string">To rozszerzenie dostarcza dane do aplikacji LittleNavMap</long-description>
             </pl>
         </localized>
 
         <license>
-            <designation type="string">
-                GNU GPL version 2 or later
-            </designation>
-
-            <file type="string">
-                LICENSE
-            </file>
-
-            <url type="string">
-                https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-            </url>
+            <designation type="string">GNU GPL version 2 or later</designation>
+            <file type="string">LICENSE</file>
+            <url type="string">https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</url>
         </license>
 
         <min-FG-version type="string">2019.2.0</min-FG-version>
         <max-FG-version type="string">none</max-FG-version>
 
         <urls>
-            <download type="string">
-                https://github.com/slawekmikula/fg-addon-littlenavmap/download
-            </download>
-
-            <support type="string">
-                https://github.com/slawekmikula/fg-addon-littlenavmap/issues
-            </support>
-
-            <code-repository type="string">
-                https://github.com/slawekmikula/fg-addon-littlenavmap
-            </code-repository>
+            <download type="string">https://github.com/slawekmikula/fg-addon-littlenavmap/download</download>
+            <support type="string">https://github.com/slawekmikula/fg-addon-littlenavmap/issues</support>
+            <code-repository type="string">https://github.com/slawekmikula/fg-addon-littlenavmap</code-repository>
         </urls>
 
         <tags>

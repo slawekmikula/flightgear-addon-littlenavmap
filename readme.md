@@ -18,11 +18,11 @@ Code:
 
 # Usage
 
+Refer to the documentation in the 'doc' folder.
 
 # History
 
 - 0.0.1 - first public version on github
-
 
 # Authors
 

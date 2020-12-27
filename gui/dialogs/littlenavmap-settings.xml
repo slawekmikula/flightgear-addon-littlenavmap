@@ -42,6 +42,32 @@
 
     <hrule/>
 
+    <checkbox>
+		<halign>left</halign>
+		<label>Enable export</label>
+		<property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/enabled</property>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+	</checkbox>
+
+    <group>
+        <layout>hbox</layout>
+
+        <text>
+            <label>Refresh rate:</label>
+        </text>
+
+        <input>
+            <name>refresh-rate</name>
+            <height>25</height>
+            <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/refresh-rate</property>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </input>
+    </group>
+
     <group>
         <layout>hbox</layout>
 
@@ -52,7 +78,7 @@
         <input>
             <name>udp-host</name>
             <height>25</height>
-            <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/addon-devel/udp-host</property>
+            <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/udp-host</property>
             <binding>
                 <command>dialog-apply</command>
                 <object-name>udp-host</object-name>
@@ -70,7 +96,7 @@
         <input>
             <name>udp-port</name>
             <height>25</height>
-            <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/addon-devel/udp-port</property>
+            <property>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/udp-port</property>
             <binding>
                 <command>dialog-apply</command>
                 <object-name>udp-port</object-name>

@@ -13,7 +13,7 @@
                 <type>string</type>
                 <node>/sim/time/gmt</node>
             </chunk>
-             <chunk>
+            <chunk>
                 <name>local-offset</name>
                 <type>integer</type>
                 <format>%d</format>
@@ -59,7 +59,18 @@
 
             <!--pitotIcePercent = 0.f-->
             <!--structuralIcePercent = 0.f-->
-            <!--airplaneTotalWeightLbs = 0.f,-->
+            <chunk>
+                <name>airplaneTotalWeightLbs = 0.f</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/fdm/yasim/gross-weight-lbs</node>
+            </chunk>
+            <chunk>
+                <name>airplaneTotalWeightLbs = 0.f</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/fdm/jsbsim/inertia/weight-lbs</node>
+            </chunk>
             <!--airplaneMaxGrossWeightLbs = 0.f-->
             <!--airplaneEmptyWeightLbs = 0.f-->
             <chunk>
@@ -74,8 +85,14 @@
                 <type>float</type>
                 <node>/consumables/fuel/total-fuel-lbs</node>
             </chunk>
-            <!--fuelFlowPPH = 0.f-->
+            <chunk>
+                <name>fuelFlowPPH (in PPS) = 0.f</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/fdm/jsbsim/fuel/flow-rate-pps</node>
+            </chunk>
             <!--fuelFlowGPH = 0.f-->
+
             <chunk>
                 <name>magVarDeg = 0.f</name>
                 <format>%f</format>
@@ -184,6 +201,12 @@
                 <format>%f</format>
                 <type>float</type>
                 <node>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</node>
+            </chunk>
+            <chunk>
+                <name>flightModel (jsb yasim)</name>
+                <format>%s</format>
+                <type>string</type>
+                <node>/sim/flight-model</node>
             </chunk>
 
             <!--modelRadiusFt = 0-->

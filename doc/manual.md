@@ -19,7 +19,25 @@ on specified port. You can define update frequency (in Hertz) e.g. 0.1 -> each
 
 # LittleNavMap configuration
 
-<TODO>
+NOTE: LittleFgConnect is an additional tool to connect FlightGear and LittleNavMap.
+It mimicks the connection that is currently available as XPlane connection so in
+the LittleNavMap you should configure everything accoring to the XPlane connection.
+In this way there is right now no change in the LittleNavMap code in order to get
+it running.
+
+Run LittleNavMap FlightGear connector (compile it) from the fgconnect repository
+(https://github.com/slawekmikula/littlefgconnect).
+
+Start it and connect to the FlightGear simulator (it will open the UDP server
+and starts listening for data from this Add-On).
+
+![alt connector](screens/littlefgconnect.png "LittleFgConnect")
+
+Start LittleNavMap. It should display that the connection to the XPlane is ready
+and waiting for the data. When FlightGear starts with this Addon enabled it should
+send the information about current aircraft position and it's data to the LittleNavMap.
+
+![alt littlenavmap](screens/littlenavmap.png "LittleNavMap")
 
 Have fun !
 

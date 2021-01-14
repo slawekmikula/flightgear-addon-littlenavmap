@@ -86,7 +86,13 @@
                 <node>/consumables/fuel/total-fuel-lbs</node>
             </chunk>
             <chunk>
-                <name>fuelFlowPPH (jsbsim) = 0.f</name>
+                <name>fuelFlowGPH (jsbsim) = 0.f</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/fdm/jsbsim/propulsion/engine/fuel-flow-rate-gph</node>
+            </chunk>
+            <chunk>
+                <name>fuelFlowPPH (in PPS from jsbsim) = 0.f</name>
                 <format>%f</format>
                 <type>float</type>
                 <node>/fdm/jsbsim/propulsion/engine/fuel-flow-rate-pps</node>

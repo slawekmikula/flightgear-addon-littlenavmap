@@ -86,12 +86,35 @@
                 <node>/consumables/fuel/total-fuel-lbs</node>
             </chunk>
             <chunk>
-                <name>fuelFlowPPH (in PPS) = 0.f</name>
+                <name>fuelFlowPPH (jsbsim) = 0.f</name>
                 <format>%f</format>
                 <type>float</type>
-                <node>/fdm/jsbsim/fuel/flow-rate-pps</node>
+                <node>/fdm/jsbsim/propulsion/engine/fuel-flow-rate-pps</node>
             </chunk>
-            <!--fuelFlowGPH = 0.f-->
+            <chunk>
+                <name>fuelFlowGPH (yasim) engine 0 = 0.f</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/engines/engine/fuel-flow-gph</node>
+            </chunk>
+            <chunk>
+                <name>fuelFlowGPH (yasim) engine 1 = 0.f</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/engines/engine[1]/fuel-flow-gph</node>
+            </chunk>
+            <chunk>
+                <name>fuelFlowGPH (yasim) engine 2 = 0.f</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/engines/engine[2]/fuel-flow-gph</node>
+            </chunk>
+            <chunk>
+                <name>fuelFlowGPH (yasim) engine 3 = 0.f</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/engines/engine[3]/fuel-flow-gph</node>
+            </chunk>
 
             <chunk>
                 <name>magVarDeg = 0.f</name>
@@ -135,7 +158,7 @@
                 <name>airplaneReg = ""</name>
                 <format>%s</format>
                 <type>string</type>
-                <node>/sim/user/callsign</node>
+                <node>/sim/multiplay/callsign</node>
             </chunk>
             <!--airplaneAirline = ""-->
             <!--airplaneFlightnumber = ""-->
@@ -207,6 +230,18 @@
                 <format>%s</format>
                 <type>string</type>
                 <node>/sim/flight-model</node>
+            </chunk>
+            <chunk>
+                <name>freeze (simulation paused)</name>
+                <format>%s</format>
+                <type>string</type>
+                <node>/sim/freeze/master</node>
+            </chunk>
+            <chunk>
+                <name>replay (replay enabled)</name>
+                <format>%d</format>
+                <type>int</type>
+                <node>/sim/replay/replay-state</node>
             </chunk>
 
             <!--modelRadiusFt = 0-->

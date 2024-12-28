@@ -249,6 +249,24 @@
                 <type>int</type>
                 <node>/sim/replay/replay-state</node>
             </chunk>
+            <chunk>
+                <name>multiplayer server enabled</name>
+                <format>%s</format>
+                <type>string</type>
+                <node>/sim/multiplay/online</node>
+            </chunk>
+            <chunk>
+                <name>multiplayer server</name>
+                <format>%s</format>
+                <type>string</type>
+                <node>/sim/multiplay/selected-server</node>
+            </chunk>
+            <chunk>
+                <name>ai objects</name>
+                <format>%s</format>
+                <type>string</type>
+                <node>/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/ai-short-list</node>
+            </chunk>
 
             <!--modelRadiusFt = 0-->
             <!--wingSpanFt = 0-->

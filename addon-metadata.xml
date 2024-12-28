@@ -9,7 +9,7 @@
     <addon>
         <identifier type="string">com.slawekmikula.flightgear.LittleNavMap</identifier>
         <name type="string">LittleNavMap</name>
-        <version type="string">0.0.1</version>
+        <version type="string">0.0.2</version>
 
         <authors>
             <author>

@@ -65,6 +65,32 @@ var main = func( addon ) {
         }
     }
 
+    var buildAiShortListGenerator = func() {
+
+        # fetch AI aircraft list
+        var aircraft_list = props.globals.getNode("/ai/models").getChildren("aircraft");
+        var items = "";
+
+        foreach(var ai_aircraft; aircraft_list){
+            var item = "";
+            item = item ~ ai_aircraft.getNode("callsign").getValue() ~ "^";
+            item = item ~ ai_aircraft.getNode("arrival-airport-id").getValue() ~ "^";
+            item = item ~ ai_aircraft.getNode("departure-airport-id").getValue() ~ "^";
+            item = item ~ ai_aircraft.getNode("position").getNode("altitude-ft").getValue() ~ "^";
+            item = item ~ ai_aircraft.getNode("position").getNode("latitude-deg").getValue() ~ "^";
+            item = item ~ ai_aircraft.getNode("position").getNode("longitude-deg").getValue();
+
+            items = items ~ item ~ "|";
+        }
+
+        # save AI aircraft items
+        var resultNode = props.globals.getNode("/addons/by-id/com.slawekmikula.flightgear.LittleNavMap/ai-short-list", 1);
+        resultNode.setValue(items);
+    }
+
+    # update each 10 seconds AI aircraft list
+    var timer = maketimer(10, buildAiShortListGenerator);
+
     var init = _setlistener(mySettingsRootPath ~ "/enabled", func() {
         if (getprop(mySettingsRootPath ~ "/enabled") == 1) {
             initProtocol();
@@ -76,6 +102,7 @@ var main = func( addon ) {
     var init = setlistener("/sim/signals/fdm-initialized", func() {
         removelistener(init); # only call once
         if (getprop(mySettingsRootPath ~ "/enabled") == 1) {
+            timer.start();
             initProtocol();
         }
     });
@@ -83,14 +110,16 @@ var main = func( addon ) {
     var reinit_listener = _setlistener("/sim/signals/reinit", func {
         removelistener(reinit_listener); # only call once
         if (getprop(mySettingsRootPath ~ "/enabled") == 1) {
+            timer.start();
             initProtocol();
         }
     });
 
-    var exit = setlistener("/sim/signals/exit", func() {
-      removelistener(exit); # only call once
-      if (getprop(mySettingsRootPath ~ "/enabled") == 1) {
-        shutdownProtocol();
-      }
+    var exit_listener = setlistener("/sim/signals/exit", func() {
+        removelistener(exit_listener); # only call once
+        if (getprop(mySettingsRootPath ~ "/enabled") == 1) {
+            timer.stop();
+            shutdownProtocol();
+        }
     });
 }
